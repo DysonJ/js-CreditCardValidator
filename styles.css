@@ -1,0 +1,133 @@
+html,body {
+  height: 100%;
+  width: 100%;
+}
+body{
+  background-color: #d5d5d5;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: 'icons';
+  src: url("fonts/icomoon.woff") format('woff'), url("fonts/icomoon.ttf") format('truetype'), url("fonts/icomoon.otf") format('opentype'), url("fonts/icomoon.eot") format('embedded-opentype');
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+.clearfix {
+  zoom: 1;
+}
+
+#title{
+  font-family: 'Roboto';
+  font-size: 100px;
+  color: #e0e0e0;
+  position: absolute;
+  left: 10%;
+  top:50%;
+  transform: rotate(-30deg);
+  transform-origin: bottom left;
+}
+
+.card-bounding{
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  position: relative;
+  top:50%;
+  transform: translateY(-50%);
+  padding: 30px;
+  border: 1px solid #3e73ea;
+  border-radius: 6px;
+  font-family: 'Roboto';
+  background: #ffffff;
+}
+
+.card-bounding aside{
+  font-size:24px;
+  padding-bottom: 8px;
+}
+.card-container {
+  width: 100%;
+  padding-left: 80px;
+  padding-right: 40px;
+  position: relative;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  margin: 0 auto 30px auto;
+}
+.card-container input {
+  width: 100%;
+  letter-spacing: 1px;
+  font-size: 30px;
+  padding: 15px 15px 15px 25px;
+  border: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+.card-type {
+  width: 80px;
+  height: 56px;
+  background: url("images/cards.png");
+  background-position: 0 -291px;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 3px;
+  left: 4px;
+}
+.card-type.mastercard {
+  background-position: 0 0;
+}
+.card-type.visa {
+  background-position: 0 -115px;
+}
+.card-type.amex {
+  background-position: 0 -57px;
+}
+.card-type.discover {
+  background-position: 0 -174px;
+}
+.card-valid {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  line-height: 60px;
+  font-size: 40px;
+  font-family: 'icons';
+  color: #ccc;
+}
+.card-valid.active {
+  color: #42ca7c;
+}
+.card-details {
+  width: 100%;
+  text-align: left;
+  margin-bottom: 30px;
+  transition: 300ms ease;
+}
+.card-details input {
+  font-size: 30px;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.card-details input.error {
+  border: 1px solid #c2313c;
+  box-shadow: 0 4px 8px 0 rgba(238,76,87,0.3);
+  outline: none;
+}
+.card-details .expiration {
+  width: 50%;
+  float: left;
+  padding-right: 5%;
+}
+.card-details .cvv {
+  width: 45%;
+  float: left;
+}

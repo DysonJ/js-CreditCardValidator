@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="creditCardValidator.js" type="text/javascript"></script>
+    <link href="styles.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  </head>
+  <body>
+
+  <div id='title'>JS Credit Card Validator!!</div>
+
+
+  <div class="card-bounding">
+
+    <aside>Card Number:</aside>
+    <div class="card-container">
+      <!--- ".card-type" is a sprite used as a background image with associated classes for the major card types, providing x-y coordinates for the sprite --->
+      <div class="card-type"></div>
+      <input placeholder="0000 0000 0000 0000" onkeyup="$cc.validate(event)" />
+      <!-- The checkmark ".card-valid" used is a custom font from icomoon.io --->
+      <div class="card-valid">&#xea10;</div>
+    </div>
+
+    <div class="card-details clearfix">
+
+      <div class="expiration">
+        <aside>Expiration Date</aside>
+        <input onkeyup="$cc.expiry.call(this,event)" maxlength="7" placeholder="mm/yyyy" />
+      </div>
+
+      <div class="cvv">
+        <aside>CVV</aside>
+        <input placeholder="XXX"/>
+      </div>
+
+    </div>
+
+  </div>
+
+  </body>
+</html>
